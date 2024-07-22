@@ -62,7 +62,11 @@ var signinCmd = &cobra.Command{
 		}
 
 		fmt.Printf("ID Token retrieved. Use `id-token` command to show the token.\n")
-		fmt.Println(idToken)
+		
+		appConfig["id_token"] = idToken
+		if err := internal.WriteConfig(configFile, cfg); err != nil {
+			log.Fatalf("failed to write id_token to file: %v", err)
+		}
 	},
 	PreRunE: func(cmd *cobra.Command, args []string) error {
 		if userEmail == "" {
