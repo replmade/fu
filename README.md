@@ -32,3 +32,13 @@ sa_key_path = <service account key file path>
 ```bash
 ./fu signin --email <user@email> --password <user-password>
 ```
+
+**id-token**: After the **signin** command, use this command to print the id token. This token is also stored in the config file under the currently active Firebase app section
+```bash
+./fu id-token
+```
+
+**session**: After the **signin** command, this command prints a session token for the user. Like the id token, this is stored in the config.toml. There's an optional argument to specify expiry in seconds.
+```bash
+./fu session --expires-in <integer-value>
+```
