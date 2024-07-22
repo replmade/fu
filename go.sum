@@ -87,6 +87,8 @@ github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZN
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
 github.com/replmade/firebase-spells-go v1.0.1 h1:x4muNMtMPI9bAOU7DH1HyK9mC03PXV/eG6P6a1iNog0=
 github.com/replmade/firebase-spells-go v1.0.1/go.mod h1:RKEnglLzhy9IueMFjnqCcFpWNbGmkta7I9JE45tKPRs=
+github.com/replmade/firebase-spells-go v1.0.2 h1:7FDs7xEFrgkvXirfC6XmVZqYTRUbuAOIj+n7gaZ/P1U=
+github.com/replmade/firebase-spells-go v1.0.2/go.mod h1:RKEnglLzhy9IueMFjnqCcFpWNbGmkta7I9JE45tKPRs=
 github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
 github.com/sagikazarmark/locafero v0.6.0 h1:ON7AQg37yzcRPU69mt7gwhFEBwxI6P9T4Qu3N51bwOk=
 github.com/sagikazarmark/locafero v0.6.0/go.mod h1:77OmuIc6VTraTXKXIs/uvUxKGUXjE1GbemJYHqdNjX0=

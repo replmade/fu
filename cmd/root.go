@@ -25,4 +25,5 @@ func init() {
 	rootCmd.AddCommand(loadCmd)
 	rootCmd.AddCommand(signinCmd)
 	rootCmd.AddCommand(idTokenCmd)
+	rootCmd.AddCommand(sessionCmd)
 }
