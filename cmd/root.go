@@ -23,4 +23,5 @@ func init() {
 	// Add subcommands
 	rootCmd.AddCommand(initCmd)
 	rootCmd.AddCommand(loadCmd)
+	rootCmd.AddCommand(signinCmd)
 }

@@ -29,6 +29,7 @@ var initCmd = &cobra.Command{
 			"api_key":     global.ApiKey,
 			"sa_key_path": global.SaKeyPath,
 		}
+		internal.UpdateCurrentApp(cfg, global.AppName)
 
 		if err := internal.WriteConfig(configFile, cfg); err != nil {
 			log.Fatalf(err.Error())

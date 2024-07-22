@@ -35,6 +35,12 @@ var loadCmd = &cobra.Command{
 					log.Fatalf("Failed to initialize Firebase: %v", err)
 				}
 				global.Fa.SetAPIKey(apiKey)
+
+				internal.UpdateCurrentApp(cfg, global.AppName)
+
+				if err := internal.WriteConfig(configFile, cfg); err != nil {
+					log.Fatalf(err.Error())
+				}
 			} else {
 				log.Printf("App: %s\nCould not find valid API Key or SA Key Path\n", global.AppName)
 			}

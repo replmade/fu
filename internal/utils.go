@@ -11,13 +11,13 @@ import (
 func EnsureConfigDirAndFile() (string, *os.File, error) {
 	configDir := filepath.Join(os.Getenv("HOME"), ".fu")
 	if err := os.MkdirAll(configDir, 0755); err != nil {
-		return "", nil, fmt.Errorf("Failed to create config directory: %v", err)
+		return "", nil, fmt.Errorf("failed to create config directory: %v", err)
 	}
 
 	configFilePath := filepath.Join(configDir, "config.toml")
 	configFile, err := os.OpenFile(configFilePath, os.O_RDWR|os.O_CREATE, 0644)
 	if err != nil {
-		return "", nil, fmt.Errorf("Failed to create/open config file: %v", err)
+		return "", nil, fmt.Errorf("failed to create/open config file: %v", err)
 	}
 
 	return configFilePath, configFile, nil
@@ -43,4 +43,13 @@ func WriteConfig(configFile *os.File, config map[string]interface{}) error {
 		return fmt.Errorf("failed to write config to file: %v", err)
 	}
 	return nil
+}
+
+// UpdateCurrentApp updates the name of the currently selected app in the configuration
+func UpdateCurrentApp(config map[string]interface{}, appName string) {
+	if _, exists := config["settings"]; !exists {
+		config["settings"] = map[string]interface{}{}
+	}
+	configSection := config["settings"].(map[string]interface{})
+	configSection["current-app"] = appName
 }
