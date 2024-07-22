@@ -2,9 +2,9 @@ package cmd
 
 import (
 	"fmt"
-	"log"
-	"github.com/spf13/cobra"
 	"fu/internal"
+	"github.com/spf13/cobra"
+	"log"
 )
 
 var idTokenCmd = &cobra.Command{
@@ -38,7 +38,7 @@ var idTokenCmd = &cobra.Command{
 		}
 
 		idToken, idTokenOk := appConfig["id_token"].(string)
-		if !idTokenOk || idToken == ""{
+		if !idTokenOk || idToken == "" {
 			fmt.Println("ID token not found. Please sign in.")
 		} else {
 			fmt.Printf("ID Token: %s\n", idToken)

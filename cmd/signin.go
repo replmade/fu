@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"fu/global"
 	"fu/internal"
-	"github.com/spf13/cobra"
 	fb "github.com/replmade/firebase-spells-go/auth"
+	"github.com/spf13/cobra"
 	"log"
 )
 
@@ -62,7 +62,7 @@ var signinCmd = &cobra.Command{
 		}
 
 		fmt.Printf("ID Token retrieved. Use `id-token` command to show the token.\n")
-		
+
 		appConfig["id_token"] = idToken
 		if err := internal.WriteConfig(configFile, cfg); err != nil {
 			log.Fatalf("failed to write id_token to file: %v", err)

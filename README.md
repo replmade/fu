@@ -42,3 +42,4 @@ sa_key_path = <service account key file path>
 ```bash
 ./fu session --expires-in <integer-value>
 ```
+
