@@ -27,3 +27,8 @@ sa_key_path = <service account key file path>
 ```bash
 ./fu load --app-name <my-app>
 ```
+
+**signin**: Attemps to sign a user into the currently loaded Firebase app with a user's email and password. If successful, an ID token is returned from Firebase
+```bash
+./fu signin --email <user@email> --password <user-password>
+```
