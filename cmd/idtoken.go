@@ -11,30 +11,9 @@ var idTokenCmd = &cobra.Command{
 	Use:   "id-token",
 	Short: "Get the ID token for the current app's user",
 	Run: func(cmd *cobra.Command, args []string) {
-		configFilePath, configFile, err := internal.EnsureConfigDirAndFile()
+		_, appConfig, err := internal.LoadAppConfig()
 		if err != nil {
 			log.Fatalf(err.Error())
-		}
-		defer configFile.Close()
-
-		cfg, err := internal.ReadConfig(configFile)
-		if err != nil {
-			log.Fatalf(err.Error())
-		}
-
-		configSection, ok := cfg["settings"].(map[string]interface{})
-		if !ok {
-			log.Fatalf("no current app is set in %s", configFilePath)
-		}
-
-		currentApp, ok := configSection["current-app"].(string)
-		if !ok || currentApp == "" {
-			log.Fatalf("no current app set in %s", configFilePath)
-		}
-
-		appConfig, ok := cfg[currentApp].(map[string]interface{})
-		if !ok {
-			log.Fatalf("no configuration found for app %s in %s", currentApp, configFilePath)
 		}
 
 		idToken, idTokenOk := appConfig["id_token"].(string)
