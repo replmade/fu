@@ -13,7 +13,7 @@ Depends on [firebase-spells-go](https://github.com/replmade/firebase-spells-go) 
 
 **init**: Initializes a Firebase application
 ```bash
-fu --app-name <my-app> --api-key <firebase api key> --sa-key-path <service account key file path>
+./fu --app-name <my-app> --api-key <firebase api key> --sa-key-path <service account key file path>
 ```
 
 Saves the Firebase API key and service account key file path to $HOME/.fu/config.toml
@@ -21,4 +21,9 @@ Saves the Firebase API key and service account key file path to $HOME/.fu/config
 [my-app]
 api_key = <firebase api key>
 sa_key_path = <service account key file path>
+```
+
+**load**: Loads a Firebase application
+```bash
+./fu load --app-name <my-app>
 ```
