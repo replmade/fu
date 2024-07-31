@@ -43,3 +43,8 @@ sa_key_path = <service account key file path>
 ./fu session --expires-in <integer-value>
 ```
 
+**custom**: After the **session** command, this command prints a "custom" token which is generated with the user's uid. Stored in config.toml.
+
+```bash
+./fu custom
+```
