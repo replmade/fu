@@ -53,4 +53,5 @@ var loadCmd = &cobra.Command{
 func init() {
 	loadCmd.Flags().StringVar(&global.AppName, "app-name", "", "Firebase app name")
 	loadCmd.MarkFlagRequired("name")
+	rootCmd.AddCommand(loadCmd)
 }

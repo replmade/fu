@@ -85,4 +85,5 @@ func init() {
 	signinCmd.Flags().StringVar(&userPassword, "password", "", "User password")
 	signinCmd.MarkFlagRequired("email")
 	signinCmd.MarkFlagRequired("password")
+	rootCmd.AddCommand(signinCmd)
 }

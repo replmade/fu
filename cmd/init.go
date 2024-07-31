@@ -64,4 +64,5 @@ func init() {
 	initCmd.MarkFlagRequired("app-name")
 	initCmd.MarkFlagRequired("api-key")
 	initCmd.MarkFlagRequired("sa-key-path")
+	rootCmd.AddCommand(initCmd)
 }

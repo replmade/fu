@@ -18,14 +18,3 @@ func Execute() {
 		os.Exit(1)
 	}
 }
-
-func init() {
-	// Add subcommands
-	rootCmd.AddCommand(initCmd)
-	rootCmd.AddCommand(loadCmd)
-	rootCmd.AddCommand(signinCmd)
-	rootCmd.AddCommand(idTokenCmd)
-	rootCmd.AddCommand(sessionCmd)
-	rootCmd.AddCommand(uidCmd)
-	rootCmd.AddCommand(customTokenCmd)
-}
